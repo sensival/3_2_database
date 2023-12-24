@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>홈</title>
+</head>
+<body>
+<h1>도서 검색</h1>
+<form action="/search" method="POST">
+<input type="text" name="search" placeholder="도서 제목을 입력하세요.">
+<input type="submit" value="검색">
+</form>
+<h1>도서 정보 입력</h1>
+<form action="/add_book" method="POST">
+<label for="title">제목:</label>
+<input type="text" name="title" id="title" required><br>
+<label for="author">저자:</label>
+<input type="text" name="author" id="author" required><br>
+<label for="publisher">출판사:</label>
+<input type="text" name="publisher" id="publisher" required><br>
+<label for="price">가격:</label>
+<input type="number" name="price" id="price" required><br>
+<label for="stock">재고:</label>
+<input type="number" name="stock" id="stock" required><br>
+<input type="submit" value="도서 정보 입력">
+</form>
+</body>
+</html>

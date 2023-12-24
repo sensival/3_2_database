@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>검색 결과</title>
+<script>
+function goBack() {
+history.back();
+}
+</script>
+<style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    }
+    th {
+    background-color: #f2f2f2;
+    }
+    </style>
+    </head>
+
+    <body>
+        <h1>검색 결과</h1>
+        <table> 
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>제목</th>
+        <th>저자</th>
+        <th>출판사</th>
+        <th>가격</th>
+        <th>재고</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in data %}
+        <tr>
+        <td>{{ book[0] }}</td>
+        <td>{{ book[1] }}</td>
+        <td>{{ book[2] }}</td>
+        <td>{{ book[3] }}</td>
+        <td>{{ book[4] }}</td>
+        <td>{{ book[5] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+        <button onclick="goBack()">이전
+        페이지로 돌아가기</button>
+        </body>
+        </html>
